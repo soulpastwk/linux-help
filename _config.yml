@@ -2,7 +2,6 @@ theme: jekyll-theme-cayman
 title: "Linux Help Docs"
 description: "Сборник инструкций и шпаргалок по Linux"
 
-# Навигация
 nav:
   - name: "📑 Содержание"
     link: "/index.md"
