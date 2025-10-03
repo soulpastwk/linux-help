@@ -8,27 +8,45 @@
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <style>
-      /* ===== Навигация ===== */
-      .top-nav {
-        margin: 10px auto;
+      /* ===== Общий фон и текст ===== */
+      body {
+        background-color: #2e2e2e; /* тёмно-серый фон */
+        color: #e0e0e0; /* светлый текст */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ===== Шапка ===== */
+      .page-header {
+        background-color: #1f1f1f;
+        padding: 20px 0;
         text-align: center;
       }
+      .project-name, .project-tagline {
+        color: #ffffff;
+        margin: 0;
+      }
+
+      /* ===== Навигация ===== */
       .top-nav ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        text-align: center;
       }
       .top-nav ul li {
         display: inline-block;
         position: relative;
         margin: 0 10px;
       }
-      .top-nav ul li a, .top-nav ul li span {
+      .top-nav ul li a,
+      .top-nav ul li span {
         text-decoration: none;
         padding: 6px 12px;
         display: inline-block;
         font-weight: bold;
-        color: white;
+        color: #ffffff;
       }
       .top-nav ul li:hover > a,
       .top-nav ul li:hover > span {
@@ -38,7 +56,7 @@
       .top-nav ul li ul.dropdown {
         display: none;
         position: absolute;
-        background: #0366d6;
+        background-color: #2a2a2a;
         padding: 0;
         margin: 0;
         border-radius: 6px;
@@ -56,10 +74,32 @@
       .top-nav ul li ul.dropdown li a {
         display: block;
         padding: 8px 12px;
-        color: white;
+        color: #ffffff;
       }
       .top-nav ul li ul.dropdown li a:hover {
         background: rgba(255,255,255,0.2);
+      }
+
+      /* ===== Основной контент ===== */
+      .main-content {
+        padding: 20px;
+      }
+
+      /* Ссылки */
+      a {
+        color: #66ccff;
+      }
+      a:hover {
+        color: #99ddff;
+      }
+
+      /* ===== Футер ===== */
+      .site-footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #1f1f1f;
+        color: #aaa;
+        font-size: 0.9em;
       }
     </style>
   </head>
