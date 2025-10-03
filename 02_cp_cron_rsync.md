@@ -1,7 +1,9 @@
 ---
 layout: default
-title: "Копирование файлов: cp, cron, rsync"
+title: "cp, cron, rsync"
+permalink: /02_cp_cron_rsync/
 ---
+
 
 # 🗂 Версионное копирование файлов с помощью `cp` и `rsync`
 

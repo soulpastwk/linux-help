@@ -1,7 +1,9 @@
 ---
 layout: default
-title: "Временные метки файлов в Linux"
+title: "Временные метки"
+permalink: /07_file_timestamps/
 ---
+
 
 # ⏱ Временные метки файлов в Linux: atime, mtime, ctime
 

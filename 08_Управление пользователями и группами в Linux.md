@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "Управление пользователями и группами"
-
+title: "Пользователи и группы"
+permalink: /08_users/
 ---
+
 # 👤 Управление пользователями и группами в Linux
 
 [![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square&logo=linux)]()

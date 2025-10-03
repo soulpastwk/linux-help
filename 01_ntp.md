@@ -1,7 +1,9 @@
 ---
 layout: default
 title: "Настройка NTP"
+permalink: /01_ntp/
 ---
+
 
 # ⏱ Настройка NTP и часового пояса на Astra Linux и РЕД ОС
 
