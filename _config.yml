@@ -1,3 +1,44 @@
+theme: jekyll-theme-cayman
 title: "Linux Help Docs"
 description: "Сборник инструкций и шпаргалок по Linux"
-theme: jekyll-theme-cayman
+
+# Навигация
+nav:
+  - name: "📑 Содержание"
+    link: "/index.md"
+  - name: "⏰ Время"
+    children:
+      - name: "Настройка NTP"
+        link: "/01_ntp.md"
+      - name: "Временные метки"
+        link: "/07_file_timestamps.md"
+  - name: "📂 Файлы"
+    children:
+      - name: "cp, cron, rsync"
+        link: "/02_cp_cron_rsync.md"
+      - name: "Копирование расширенно"
+        link: "/03_copy_advanced.md"
+      - name: "Архивы"
+        link: "/04_archives.md"
+  - name: "📊 Мониторинг"
+    children:
+      - name: "Мониторинг Linux"
+        link: "/05_monitoring.md"
+      - name: "Информация о системе"
+        link: "/06_sysinfo.md"
+  - name: "👤 Пользователи"
+    children:
+      - name: "Пользователи и группы"
+        link: "/08_users.md"
+      - name: "Права доступа"
+        link: "/12_permissions.md"
+  - name: "🌐 Сети"
+    children:
+      - name: "Кратко"
+        link: "/10_network_basics.md"
+      - name: "Подробнее"
+        link: "/11_network_details.md"
+  - name: "⚙️ Shell"
+    children:
+      - name: "История команд"
+        link: "/09_shell_history.md"
