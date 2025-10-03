@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <style>
+      /* ===== Навигация ===== */
+      .top-nav {
+        margin: 10px auto;
+        text-align: center;
+      }
+      .top-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .top-nav ul li {
+        display: inline-block;
+        position: relative;
+        margin: 0 10px;
+      }
+      .top-nav ul li a, .top-nav ul li span {
+        text-decoration: none;
+        padding: 6px 12px;
+        display: inline-block;
+        font-weight: bold;
+        color: white;
+      }
+      .top-nav ul li:hover > a,
+      .top-nav ul li:hover > span {
+        background: rgba(255,255,255,0.2);
+        border-radius: 6px;
+      }
+      .top-nav ul li ul.dropdown {
+        display: none;
+        position: absolute;
+        background: #0366d6;
+        padding: 0;
+        margin: 0;
+        border-radius: 6px;
+        min-width: 180px;
+        z-index: 999;
+        text-align: left;
+      }
+      .top-nav ul li:hover ul.dropdown {
+        display: block;
+      }
+      .top-nav ul li ul.dropdown li {
+        display: block;
+        margin: 0;
+      }
+      .top-nav ul li ul.dropdown li a {
+        display: block;
+        padding: 8px 12px;
+        color: white;
+      }
+      .top-nav ul li ul.dropdown li a:hover {
+        background: rgba(255,255,255,0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ site.title }}</h1>
+      <h2 class="project-tagline">{{ site.description }}</h2>
+
+      <!-- Горизонтальное меню -->
+      <nav class="top-nav">
+        <ul>
+          {% for item in site.nav %}
+            <li>
+              {% if item.children %}
+                <span>{{ item.name }}</span>
+                <ul class="dropdown">
+                  {% for child in item.children %}
+                    <li><a href="{{ child.link | relative_url }}">{{ child.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">
+          Сайт собран на <a href="https://pages.github.com/">GitHub Pages</a> с темой Cayman.
+        </span>
+      </footer>
+    </main>
+  </body>
+</html>
