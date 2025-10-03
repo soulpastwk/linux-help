@@ -1,2 +1,3 @@
-theme: jekyll-theme-minimal
-title: Test site Linux
+title: "Linux Help Docs"
+description: "Сборник инструкций и шпаргалок по Linux"
+theme: jekyll-theme-cayman
