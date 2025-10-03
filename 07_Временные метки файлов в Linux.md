@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Временные метки файлов в Linux"
+---
+
 # ⏱ Временные метки файлов в Linux: atime, mtime, ctime
 
 [![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square&logo=linux)]()

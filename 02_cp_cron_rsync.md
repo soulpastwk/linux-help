@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Копирование файлов: cp, cron, rsync"
+---
+
 # 🗂 Версионное копирование файлов с помощью `cp` и `rsync`
 
 [![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square\&logo=linux)](https://www.linux.org/)

@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Мониторинг и отладка Linux"
+---
+
 # 🖥 Гайд по мониторингу и отладке Linux
 
 [![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square&logo=linux)]()

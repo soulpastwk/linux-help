@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Настройка NTP"
+---
+
 # ⏱ Настройка NTP и часового пояса на Astra Linux и РЕД ОС
 
 [![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square&logo=linux)]()
