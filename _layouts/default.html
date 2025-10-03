@@ -110,6 +110,29 @@
         color: #aaa;
         font-size: 0.9em;
       }
+
+      /* ===== Блоки кода ===== */
+      pre, code {
+        background-color: #121212 !important; /* почти чёрный */
+        color: #ffffff !important; /* белый текст */
+        font-family: "Fira Code", monospace;
+      }
+
+      /* Для <pre> с прокруткой */
+      pre {
+        padding: 12px 16px;
+        border-radius: 8px;
+        overflow-x: auto;
+        line-height: 1.5;
+        margin: 1em 0;
+        box-shadow: inset 0 0 8px rgba(255,255,255,0.05);
+      }
+
+      /* Для inline-кода внутри текста */
+      code {
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
     </style>
   </head>
 
@@ -150,3 +173,5 @@
     </main>
   </body>
 </html>
+
+
