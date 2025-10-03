@@ -43,16 +43,20 @@
       .top-nav ul li a,
       .top-nav ul li span {
         text-decoration: none;
-        padding: 6px 12px;
+        padding: 8px 14px;
         display: inline-block;
         font-weight: bold;
         color: #ffffff;
+        border-radius: 6px;
+        transition: all 0.3s ease;
       }
       .top-nav ul li:hover > a,
       .top-nav ul li:hover > span {
-        background: rgba(255,255,255,0.2);
-        border-radius: 6px;
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0 0 10px rgba(102,204,255,0.7);
       }
+
+      /* Дропдаун */
       .top-nav ul li ul.dropdown {
         display: none;
         position: absolute;
@@ -63,6 +67,7 @@
         min-width: 180px;
         z-index: 999;
         text-align: left;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
       }
       .top-nav ul li:hover ul.dropdown {
         display: block;
@@ -73,11 +78,13 @@
       }
       .top-nav ul li ul.dropdown li a {
         display: block;
-        padding: 8px 12px;
+        padding: 10px 14px;
         color: #ffffff;
+        transition: all 0.3s ease;
       }
       .top-nav ul li ul.dropdown li a:hover {
-        background: rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.1);
+        box-shadow: inset 0 0 8px rgba(102,204,255,0.6);
       }
 
       /* ===== Основной контент ===== */
@@ -88,9 +95,11 @@
       /* Ссылки */
       a {
         color: #66ccff;
+        transition: all 0.3s ease;
       }
       a:hover {
         color: #99ddff;
+        text-shadow: 0 0 8px #66ccff;
       }
 
       /* ===== Футер ===== */
