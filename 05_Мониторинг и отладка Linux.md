@@ -198,6 +198,3 @@ journalctl -u ssh | grep "Failed"
 * [man free](https://linux.die.net/man/1/free)
 * [man smartctl](https://linux.die.net/man/8/smartctl)
 * [man journalctl](https://www.freedesktop.org/software/systemd/man/journalctl.html)
-
-Хочешь, чтобы я сделал такую версию?
-```
