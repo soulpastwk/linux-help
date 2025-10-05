@@ -19,6 +19,12 @@ nav:
         link: "/03_copy_advanced"
       - name: "Архивы"
         link: "/04_archives"
+      - name: "Операции с файлами"
+        link: "/13_file_operation" 
+      - name: "Операции с директориями"
+        link: "/14_dir_operation"      
+      - name: "Поиск и просмотр файлов"
+        link: "/15_find_file"                
   - name: "📊 Мониторинг"
     children:
       - name: "Мониторинг Linux"
