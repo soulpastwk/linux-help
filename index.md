@@ -47,9 +47,10 @@
 13. [Кратко про работу с сетями](10_network_basics)
 14. [Подробнее про сети (ip, nmcli, netplan, firewall)](11_network_details)
 15. [Настройка и виды сетевых бондов (bonding) в Linux](16_Bonding)
+16. [Статичные интерфейсы](17_inet_static)
 
 ### ⚙️ Shell и команды
-16. [История команд (прокачиваем history)](09_shell_history)
+17. [История команд (прокачиваем history)](09_shell_history)
 
 ---
 
