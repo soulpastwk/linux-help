@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <title>{{ page.title | default: site.title }}</title>
-    <p style="color:#ccc; font-size:0.9em;">
-  Материал сайта обновлён: {{ "index.md" | last_modified_at: "%d.%m.%Y в %H:%M" }}
-</p>
-
     <meta name="description" content="{{ page.description | default: site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,27 +11,25 @@
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <style>
-      /* ===== Общий фон и текст ===== */
       body {
-        background-color: #2e2e2e; /* тёмно-серый фон */
-        color: #e0e0e0; /* светлый текст */
+        background-color: #2e2e2e;
+        color: #e0e0e0;
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
       }
 
-      /* ===== Шапка ===== */
       .page-header {
         background-color: #1f1f1f;
         padding: 20px 0;
         text-align: center;
       }
+
       .project-name, .project-tagline {
         color: #ffffff;
         margin: 0;
       }
 
-      /* ===== Навигация ===== */
       .top-nav ul {
         list-style: none;
         padding: 0;
@@ -63,7 +57,6 @@
         box-shadow: 0 0 10px rgba(102,204,255,0.7);
       }
 
-      /* Дропдаун */
       .top-nav ul li ul.dropdown {
         display: none;
         position: absolute;
@@ -94,12 +87,10 @@
         box-shadow: inset 0 0 8px rgba(102,204,255,0.6);
       }
 
-      /* ===== Основной контент ===== */
       .main-content {
         padding: 20px;
       }
 
-      /* Ссылки */
       a {
         color: #66ccff;
         transition: all 0.3s ease;
@@ -109,7 +100,6 @@
         text-shadow: 0 0 8px #66ccff;
       }
 
-      /* ===== Футер ===== */
       .site-footer {
         text-align: center;
         padding: 20px;
@@ -118,9 +108,8 @@
         font-size: 0.9em;
       }
 
-      /* ===== Блоки кода ===== */
       pre[class*="language-"], code[class*="language-"] {
-        background-color: #121212 !important; /* почти чёрный */
+        background-color: #121212 !important;
         color: #ffffff !important;
         font-family: "Fira Code", monospace;
         font-size: 0.95em;
@@ -130,13 +119,10 @@
         overflow-x: auto;
       }
 
-      /* ===== Специальная подсветка ключей команд (-, --) ===== */
       .token.option {
-        color: #66ccff !important; /* голубой */
+        color: #66ccff !important;
         font-weight: bold;
       }
-
-      /* Остальная подсветка Prism (по желанию можно настроить) */
       .token.comment { color: #888888 !important; }
       .token.keyword { color: #ffffff !important; }
       .token.string { color: #99ff99 !important; }
@@ -150,6 +136,34 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ site.title }}</h1>
       <h2 class="project-tagline">{{ site.description }}</h2>
+
+      <!-- 🕒 Дата последнего обновления -->
+      <p id="last-update" style="color:#ccc; font-size:0.9em;">Загрузка даты обновления...</p>
+
+      <script>
+      fetch("https://api.github.com/repos/soulpastwk/linux-help/commits?path=index.md&page=1&per_page=1")
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.length > 0) {
+            const commitDate = new Date(data[0].commit.author.date);
+            const formattedDate = commitDate.toLocaleString("ru-RU", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit"
+            }).replace(',', ' в');
+            document.getElementById("last-update").textContent =
+              `Материал сайта обновлён: ${formattedDate}`;
+          } else {
+            document.getElementById("last-update").textContent = "Дата обновления недоступна";
+          }
+        })
+        .catch(err => {
+          document.getElementById("last-update").textContent = "Ошибка получения даты обновления";
+          console.error(err);
+        });
+      </script>
 
       <!-- Горизонтальное меню -->
       <nav class="top-nav">
@@ -177,15 +191,13 @@
 
       <footer class="site-footer">
         <span class="site-footer-credits">
-          Сайт создал при помощи <a href="https://pages.github.com/">GitHub Pages</a> Специально для ГИС =]
+          Сайт создал при помощи <a href="https://pages.github.com/">GitHub Pages</a> специально для ГИС =]
         </span>
       </footer>
     </main>
 
-    <!-- PrismJS JS для подсветки -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
     <script>
-      // Расширение PrismJS для подсветки ключей команд (-, --)
       Prism.languages.bash = Prism.languages.extend('bash', {
         'option': {
           pattern: /--?[a-zA-Z0-9-]+/,
@@ -195,4 +207,3 @@
     </script>
   </body>
 </html>
-
