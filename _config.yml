@@ -21,6 +21,8 @@ nav:
         link: "/03_copy_advanced"
       - name: "Архивы"
         link: "/04_archives"
+      - name: "Архивы - расширенно"
+        link: "/18_archives"        
       - name: "Операции с файлами"
         link: "/13_file_operation" 
       - name: "Операции с директориями"
