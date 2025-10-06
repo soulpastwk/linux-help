@@ -1,6 +1,8 @@
 theme: jekyll-theme-cayman
 title: "Linux Help Docs"
 description: "Сборник инструкций и шпаргалок по Linux"
+plugins:
+  - jekyll-last-modified-at
 
 nav:
   - name: "📑 Содержание"
