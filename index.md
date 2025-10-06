@@ -12,7 +12,7 @@
 
 Можно открывать статьи прямо на сайте.
 Либо клонировать себе мой репозиторий с github.
- https://github.com/soulpastwk/site-test.gihub.io/tree/main
+https://github.com/soulpastwk/linux-help/tree/main
 
 
 А так же просто скачать статьи с гитхаб и использовать на своё усмотрение.
