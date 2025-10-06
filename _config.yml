@@ -45,6 +45,8 @@ nav:
         link: "/10_network_basics"
       - name: "Подробнее"
         link: "/11_network_details"
+      - name: "Настройка Бонда"
+        link: "/16_Bonding"
   - name: "⚙️ Shell"
     children:
       - name: "История команд"
