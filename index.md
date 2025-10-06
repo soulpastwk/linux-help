@@ -48,7 +48,7 @@
 14. [Подробнее про сети (ip, nmcli, netplan, firewall)](11_network_details)
 
 ### ⚙️ Shell и команды
-15. [История команд (HISTFILE, HISTSIZE, HISTTIMEFORMAT)](09_shell_history)
+15. [История команд (прокачиваем history)](09_shell_history)
 
 ---
 
