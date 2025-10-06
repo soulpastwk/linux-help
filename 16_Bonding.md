@@ -63,6 +63,7 @@
 * ✅ Поддержка большинства дистрибутивов Linux
 
 ---
+
 <a id="primer-seti"></a>
 ## 🌐 Пример сети
 
@@ -76,6 +77,7 @@
 | Bond-интерфейс | `bond0`           |
 
 ---
+
 <a id="interfaces"></a>
 ## 🧩 Настройка bonding через `/etc/network/interfaces`
 
@@ -85,6 +87,7 @@
 > Перед настройкой bond необходимо установить пакет `ifenslave`
 
 ---
+
 <a id="interfaces-struktura-fayla"></a>
 ### 📄 Базовая структура файла `/etc/network/interfaces`
 
@@ -109,6 +112,7 @@ iface bond0 inet static
     bond-updelay 200
     bond-slaves eth0 eth1
 ```
+
 <a id="interfaces-obyasnenie-parametrov"></a>
 ### 🔍 Объяснение параметров
 
@@ -131,6 +135,7 @@ iface bond0 inet static
 Linux поддерживает 7 режимов работы bonding. Ниже — подробные описания и готовые конфиги для каждого.
 
 ---
+
 <a id="mode0-balance-rr"></a>
 ### 🟢 mode=0 — **balance-rr (Round Robin)**
 
@@ -153,6 +158,7 @@ iface bond0 inet static
 ```
 
 ---
+
 <a id="mode1-active-backup"></a>
 ### 🟡 mode=1 — **active-backup**
 
@@ -177,6 +183,7 @@ iface bond0 inet static
 💡 Самый часто используемый режим в серверах и системах с одной сетью.
 
 ---
+
 <a id="mode2-balance-xor"></a>
 ### 🔵 mode=2 — **balance-xor**
 
@@ -197,6 +204,7 @@ iface bond0 inet static
 💡 Требует поддержки агрегирования каналов на коммутаторе.
 
 ---
+
 <a id="mode3-broadcast"></a>
 ### ⚫ mode=3 — **broadcast**
 
@@ -215,6 +223,7 @@ iface bond0 inet static
 ```
 
 ---
+
 <a id="mode4-8023ad-lacp"></a>
 ### 🟣 mode=4 — **802.3ad (LACP)**
 
@@ -237,6 +246,7 @@ iface bond0 inet static
 ```
 
 ---
+
 <a id="mode5-balance-tlb"></a>
 ### 🟠 mode=5 — **balance-tlb (Transmit Load Balancing)**
 
@@ -254,6 +264,7 @@ iface bond0 inet static
 ```
 
 ---
+
 <a id="mode6-balance-alb"></a>
 ### 🔴 mode=6 — **balance-alb (Adaptive Load Balancing)**
 
@@ -270,8 +281,8 @@ iface bond0 inet static
     bond-miimon 100
     bond-slaves eth0 eth1
 ```
-
 ---
+
 <a id="aktivatsiya-bonding-i-proverka"></a>
 ## 🔧 Активация bonding и проверка
 
@@ -295,8 +306,8 @@ iface bond0 inet static
    ```bash
    cat /proc/net/bonding/bond0
    ```
-
 ---
+
 <a id="svodnaya-tablica-rezhimov-bonding"></a>
 ## 🧭 Сводная таблица режимов bonding
 
@@ -311,6 +322,7 @@ iface bond0 inet static
 | 6    | balance-alb    | ❌            | ✔ (Tx/Rx)    | ✔      | Адаптивная балансировка |
 
 ---
+
 <a id="nmcli-networkmanager"></a>
 ## 🧰 Настройка bonding через `nmcli` (NetworkManager)
 
@@ -366,6 +378,7 @@ cat /proc/net/bonding/bond0
 ```
 
 ---
+
 <a id="vyvod"></a>
 ## ✅ Вывод
 
@@ -381,12 +394,14 @@ Bonding — мощный инструмент для серверов Linux, п�
 Вот подробное объяснение **всех возможных значений** этого параметра (актуально для Linux bonding-драйвера `ifenslave` и `bonding.ko`).
 
 ---
+
 <a id="bond-xmit-hash-policy"></a>
 # ⚙️ `bond-xmit-hash-policy` — Политика хеширования исходящих пакетов
 
 Этот параметр определяет, **как ядро Linux вычисляет хеш (ключ)** для выбора интерфейса, через который будет отправлен исходящий пакет в многоканальном бонде (`balance-xor`, `802.3ad`, `balance-tlb`, `balance-alb` и т.д.).
 
 ---
+
 <a id="bond-xmit-hash-policy-sintaksis"></a>
 ## 📘 Общий синтаксис
 
@@ -401,6 +416,7 @@ echo <режим> > /sys/class/net/bond0/bonding/xmit_hash_policy
 ```
 
 ---
+
 <a id="bond-xmit-hash-policy-znacheniya"></a>
 ## 📊 Возможные значения (режимы хеширования)
 
@@ -417,6 +433,7 @@ echo <режим> > /sys/class/net/bond0/bonding/xmit_hash_policy
 | `layer3+4+srcmac` | ⚙️               | IP + порт + MAC         | Учитывает MAC и IP/порт источника                       | Когда балансировка зависит от MAC клиента               |
 
 ---
+
 <a id="bond-xmit-hash-policy-rezhimy"></a>
 ## 📖 Подробное объяснение режимов
 
@@ -544,6 +561,7 @@ bond-xmit-hash-policy vlan+ip+port
 ```
 
 ---
+
 <a id="bond-xmit-hash-policy-rekomendatsii"></a>
 ## 🧭 Рекомендации по выбору политики
 
@@ -557,6 +575,7 @@ bond-xmit-hash-policy vlan+ip+port
 | Контейнеры / k8s          | `layer3+4+srcmac`            | Для уникальности потоков           |
 
 ---
+
 <a id="bond-xmit-hash-policy-proverka"></a>
 ## 🧩 Проверка текущей политики
 
@@ -571,6 +590,7 @@ Transmit Hash Policy: layer3+4 (2)
 ```
 
 ---
+
 <a id="bond-xmit-hash-policy-itogo"></a>
 ## 🧠 Итого
 
@@ -636,6 +656,7 @@ ifenslave bond0 eth0 eth1
 * Можно создать несколько bond-интерфейсов, и для всех них используется **один и тот же ifenslave**.
 
 ---
+
 <a id="vazhnye-momenty"></a>
 ### 3. Важные моменты
 
@@ -646,6 +667,7 @@ ifenslave bond0 eth0 eth1
 3. **Поддержка разных режимов bonding** (active-backup, LACP, balance-alb и т.д.) встроена в модуль ядра, нет необходимости ставить что-то дополнительно.
 
 ---
+
 <a id="vyvod-po-paketam-i-modulyam"></a>
 ✅ **Вывод:**
 
