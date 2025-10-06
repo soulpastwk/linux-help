@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>{{ page.title | default: site.title }}</title>
+    <p style="color:#ccc; font-size:0.9em;">
+  Материал сайта обновлён: {{ "index.md" | last_modified_at: "%d.%m.%Y в %H:%M" }}
+</p>
+
     <meta name="description" content="{{ page.description | default: site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
