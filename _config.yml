@@ -22,7 +22,7 @@ nav:
       - name: "Архивы"
         link: "/04_archive"
       - name: "Архивы - расширенно"
-        link: "/18_archives"        
+        link: "/18_archive"        
       - name: "Операции с файлами"
         link: "/13_file_operation" 
       - name: "Операции с директориями"
