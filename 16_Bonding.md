@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Настройка Бонда"
+permalink: /16_Bonding/
+---
+
 [![Linux](https://img.shields.io/badge/Platform-Linux-blue?style=flat-square&logo=linux)]()
 [![Debian](https://img.shields.io/badge/Tested%20on-Astra%20Linux%20%7C%20RED%20OS%20%7C%20Debian-orange?style=flat-square&logo=debian)]()
 [![Network](https://img.shields.io/badge/Type-Network%20Bonding-lightgrey?style=flat-square&logo=proxmox)]()
