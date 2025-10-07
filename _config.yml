@@ -59,7 +59,7 @@ nav:
     children:
       - name: "История команд"
         link: "/09_shell_history"
-  - name: "🔧 Службы "
+  - name: "🔧 Службы"
     children:
       - name: "Службы systemd/systemctl"
         link: "/19_systemctl-guide" 
