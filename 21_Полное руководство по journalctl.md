@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Полное руководство по journalctl (systemd-journald)"
-permalink: /20_journalctl-guide/
+permalink: /21_journalctl-guide/
 ---
 
 # 🗂 `journalctl` — исчерпывающий справочник
