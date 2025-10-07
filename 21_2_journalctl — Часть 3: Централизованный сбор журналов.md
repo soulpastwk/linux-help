@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "journalctl — Часть 3: Централизованный сбор журналов через systemd-journal-remote"
-permalink: /21_2journalctl-remote/
+permalink: /21_2_journalctl-remote/
 ---
 
 # 🌐 `journalctl` — Часть 3: <br>
