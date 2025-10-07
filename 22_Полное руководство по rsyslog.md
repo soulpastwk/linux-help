@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Полное руководство по rsyslog"
-permalink: /12_rsyslog-guide/
+permalink: /22_rsyslog-guide/
 ---
 
 # 🗂 Полное руководство по rsyslog
