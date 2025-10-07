@@ -57,9 +57,9 @@
 
 ### 🔧 Управление службами основы
 21. [Полный гайд по systemctl и unit-файлам (systemd)](19_systemctl-guide)
-22. [Journalctl - справочник](21_journalctl-guide)
-23. [Journalctl — Часть 2](21_1_journalctl-guide)
-24. [Journalctl — Часть 3](21_2_journalctl-remote)
+22. [Journalctl — исчерпывающий справочник](21_journalctl-guide)
+23. [Journalctl — Часть 2: конфигурация systemd-journald](21_1_journalctl-guide)
+24. [Journalctl — Часть 3: Централизованный сбор журналов](21_2_journalctl-remote)
 25. [Руководство по rsyslog](22_rsyslog-guide)
 
 ---
