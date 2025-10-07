@@ -55,10 +55,14 @@ nav:
         link: "/17_inet_static"
       - name: "Проверка сетевой доступности"
         link: "/20_network-port-check"
-  - name: "⚙️ Shell"
+  - name: "⚙️ Логи и история"
     children:
       - name: "История команд"
         link: "/09_shell_history"
+      - name: "Ротация логов"
+        link: "/23_log-rotation-native-only"
+      - name: "Проверка аудита"
+        link: "/23_1_journalctl-audit-check"        
   - name: "🔧 Службы"
     children:
       - name: "Systemd"
