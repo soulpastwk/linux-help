@@ -135,13 +135,18 @@
         column-count: 2;
         column-gap: 40px;
       }
-
       .two-columns h3 {
         break-inside: avoid;
       }
-
       .two-columns ol, .two-columns ul {
         padding-left: 20px;
+      }
+
+      /* Адаптивность для мобильных */
+      @media (max-width: 900px) {
+        .two-columns {
+          column-count: 1;
+        }
       }
     </style>
   </head>
@@ -203,7 +208,7 @@
 
       <footer class="site-footer">
         <span class="site-footer-credits">
-          Сайт создал при помощи <a href="https://pages.github.com/">GitHub Pages</a> специально для ГИС =]
+          Сайт создан при помощи <a href="https://pages.github.com/">GitHub Pages</a> специально для ГИС =]
         </span>
       </footer>
     </main>
