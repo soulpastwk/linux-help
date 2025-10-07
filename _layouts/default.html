@@ -129,6 +129,20 @@
       .token.operator { color: #ffcc66 !important; }
       .token.number { color: #ff9999 !important; }
       .token.function { color: #ffffff !important; }
+
+      /* Две колонки для содержания */
+      .two-columns {
+        column-count: 2;
+        column-gap: 40px;
+      }
+
+      .two-columns h3 {
+        break-inside: avoid;
+      }
+
+      .two-columns ol, .two-columns ul {
+        padding-left: 20px;
+      }
     </style>
   </head>
 
@@ -137,7 +151,6 @@
       <h1 class="project-name">{{ site.title }}</h1>
       <h2 class="project-tagline">{{ site.description }}</h2>
 
-      <!-- 🕒 Дата последнего обновления -->
       <p id="last-update" style="color:#ccc; font-size:0.9em;">Загрузка даты обновления...</p>
 
       <script>
@@ -165,7 +178,6 @@
         });
       </script>
 
-      <!-- Горизонтальное меню -->
       <nav class="top-nav">
         <ul>
           {% for item in site.nav %}
