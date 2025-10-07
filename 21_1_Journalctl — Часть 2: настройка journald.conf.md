@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "journalctl — Часть 2: Cheatsheet и настройка journald.conf"
-permalink: /10_journalctl-cheatsheet/
+permalink: /21_1_journalctl-guide/
 ---
 
 # 🧾 `journalctl` — Часть 2: Cheatsheet и конфигурация systemd-journald
