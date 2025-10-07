@@ -57,3 +57,7 @@ nav:
     children:
       - name: "История команд"
         link: "/09_shell_history"
+  - name: "🔧 Службы"
+    children:
+      - name: "Управление службами основы"
+        link: "/19_systemctl-guide"        
