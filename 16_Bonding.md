@@ -60,6 +60,7 @@ permalink: /16_Bonding/
 Применяется на серверах, маршрутизаторах, в виртуализации и кластерах.
 
 ---
+
 <a id="osnovnye-preimushchestva-bonding"></a>
 ## ⚙️ Основные преимущества bonding
 
