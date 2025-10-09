@@ -76,4 +76,11 @@ nav:
       - name: "Journalctl - part 3"
         link: "/21_2_journalctl-remote"
       - name: "Rsyslog"
-        link: "/22_rsyslog-guide"        
+        link: "/22_rsyslog-guide"      
+          - name: "🖴 Управление дисками"
+    children:
+      - name: "Работа с новыми дисками и создание разделов в Linux (fdisk, parted)"
+        link: "/25_Disks_Partitioning"
+      - name: "Настройка и расширение LVM в Linux"
+        link: "/25_LVM"
+
