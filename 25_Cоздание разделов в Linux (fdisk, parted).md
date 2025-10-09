@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Работа с новыми дисками и создание разделов в Linux (fdisk, parted)"
-permalink: /16_Disks_Partitioning/
+permalink: /25_Disks_Partitioning/
 ---
 
 [![Linux](https://img.shields.io/badge/Platform-Linux-blue?style=flat-square&logo=linux)]()
