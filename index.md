@@ -85,5 +85,5 @@
 <ol start="28">
   <li><a href="25_Disks_Partitioning">Работа с новыми дисками и создание разделов в Linux (fdisk, parted)</a></li>
   <li><a href="25_LVM">Настройка и расширение LVM в Linux</a></li>
-
+</ol>
 </div>
