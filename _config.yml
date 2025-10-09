@@ -77,7 +77,7 @@ nav:
         link: "/21_2_journalctl-remote"
       - name: "Rsyslog"
         link: "/22_rsyslog-guide"      
-          - name: "🖴 Управление дисками"
+  - name: "🖴 Управление дисками"
     children:
       - name: "Создание разделов"
         link: "/25_Disks_Partitioning"
