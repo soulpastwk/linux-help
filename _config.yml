@@ -43,6 +43,8 @@ nav:
         link: "/08_users"
       - name: "Права доступа"
         link: "/12_permissions"
+      - name: "Разблокировка администратора"
+        link: "/unlock_admin_astra"
       - name: "Разблокировка пользователя PAM"
         link: "/unlock_user_astra"
       - name: "Определение PAM-блокировок"
