@@ -43,6 +43,10 @@ nav:
         link: "/08_users"
       - name: "Права доступа"
         link: "/12_permissions"
+      - name: "Разблокировка пользователя PAM"
+        link: "/unlock_user_astra"
+      - name: "Определение PAM-блокировок"
+        link: "/02_pam_unlock"
   - name: "🌐 Сети"
     children:
       - name: "Кратко"
